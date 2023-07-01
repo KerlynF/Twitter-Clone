@@ -5,7 +5,7 @@ services:
     restart: always
     environment:
       - POSTGRES_USER=kfrias
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=kfrias
     ports:
       - '5432:5432'
     volumes: 

@@ -16,8 +16,9 @@
     "trailingComma": "all"
   },
   "dependencies": {
-    "@prisma/client": "4.16.1",
     "@apollo/server": "4.7.4",
+    "@nexus/schema": "^0.20.1",
+    "@prisma/client": "4.16.1",
     "bcryptjs": "2.4.3",
     "graphql": "16.6.0",
     "graphql-middleware": "6.1.34",

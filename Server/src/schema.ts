@@ -41,6 +41,13 @@ const Query = objectType({
       },
     })
 
+    t.nonNull.list.nonNull.field('users', {
+      type: 'User',
+      resolve: (parent, args, context: Context) => {
+        return context.prisma.user.findMany()
+      },
+    })
+
     t.nullable.field('postById', {
       type: 'Post',
       args: {
@@ -63,6 +70,7 @@ const Query = objectType({
           type: 'PostOrderByUpdatedAtInput',
         }),
       },
+      
       resolve: (_parent, args, context: Context) => {
         const or = args.searchString
           ? {
