@@ -6,12 +6,14 @@ query USERS_QUERY {
     users {
         id
         name
+        email
     }
 }`
 
 interface User {
     name: string,
-    id: number
+    id: number,
+    email: string
 }
 
 const Users = () => {
@@ -25,6 +27,7 @@ const Users = () => {
                 <>
                     <div>{user.id}</div>
                     <div>{user.name}</div>
+                    <div>{user.email}</div>
                 </>
             ))}
         </div>
