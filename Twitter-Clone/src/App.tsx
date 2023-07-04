@@ -1,4 +1,5 @@
 import './App.css'
+import './styles/login.css'
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client'
 import Users from './components/Users'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -32,7 +33,8 @@ const router = createBrowserRouter([
   },
   {
     path: '/signup',
-    element: <Signup/>
+    element: <Signup/>,
+    children: []
   }, 
   {
     path: '/login',
